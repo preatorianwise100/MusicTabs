@@ -42,12 +42,27 @@
                                     <constraint firstAttribute="height" constant="667" id="MGD-uC-pLB"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="187" id="9xa-wm-K3G" customClass="TableViewCellFavor" customModule="MusicTags" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="187"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="159" id="9xa-wm-K3G" customClass="TableViewCellFavor" customModule="MusicTags" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9xa-wm-K3G" id="iQO-kr-2gc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gx3-r5-NUb">
+                                                    <rect key="frame" x="15" y="11" width="138" height="136"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="138" id="WoB-SE-39S"/>
+                                                        <constraint firstAttribute="height" constant="136" id="kQJ-Kz-2RJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gx3-r5-NUb" firstAttribute="top" secondItem="iQO-kr-2gc" secondAttribute="topMargin" id="VUf-bu-mts"/>
+                                                <constraint firstItem="gx3-r5-NUb" firstAttribute="leading" secondItem="iQO-kr-2gc" secondAttribute="leadingMargin" id="fqo-g7-ec5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gx3-r5-NUb" secondAttribute="bottom" constant="1" id="r77-00-Teb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gx3-r5-NUb" secondAttribute="trailing" constant="207" id="zas-ad-Ldi"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
