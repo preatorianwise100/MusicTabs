@@ -81,36 +81,15 @@ class ViewControlMusic: UIViewController,UITableViewDataSource ,UITableViewDeleg
         print("deberia abrir Details")
         
         performSegue(withIdentifier: "showDetails", sender: self)
-        
-//       let listObj = viewModelMusic.arrayOfList[indexPath.row]
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewControlDetails")  as! ViewControlDetails
-////        myVC.nameString = listObj.collectionCensoredName
-////        myVC.decripString = listObj.artistName
-////        myVC.imageString = listObj.artworkUrl100
-//        let navController = UINavigationController(rootViewController: myVC)
-//        self.navigationItem.backBarButtonItem = UIBarButtonItem(image: UIImage(named: "back_arrow"), style: .plain, target: ViewControlDetails.self, action: nil)
-//        self.navigationController?.present(navController, animated: true, completion: nil)
-        
-        
+  
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let listObj = viewModelMusic.arrayOfList[(tableView.indexPathForSelectedRow?.row)!]
+        if let destination = segue.destination as? ViewControlDetails{
+            destination.nameString = listObj.collectionName
+            destination.imageString = listObj.artworkUrl100
+        }
     }
     
-    func someMethodIWantToCall(cell: UITableViewCell) {
-        //        print("Inside of ViewController now...")
-        
-        // we're going to figure out which name we're clicking on
-        
-        //        guard let indexPathTapped = tableView.indexPath(for: cell) else { return }
-        //
-        //        let contact = twoDimensionalArray[indexPathTapped.section].names[indexPathTapped.row]
-        //        print(contact)
-        //
-        //        let hasFavorited = contact.hasFavorited
-        //        twoDimensionalArray[indexPathTapped.section].names[indexPathTapped.row].hasFavorited = !hasFavorited
-        //
-        //        //        tableView.reloadRows(at: [indexPathTapped], with: .fade)
-        //
-        //        cell.accessoryView?.tintColor = hasFavorited ? UIColor.lightGray : .red
-    }
     
 }

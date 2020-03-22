@@ -15,9 +15,13 @@ class ViewControlDetails: UIViewController {
     @IBOutlet weak var imagenDetails: UIImageView!
     @IBOutlet weak var ButtonVerOnline: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    
+    var imageString:String!
+    var nameString:String!
+   // var decripString:String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+         updateUI()
         setButtonVer()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -30,5 +34,16 @@ class ViewControlDetails: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func updateUI() {
+        
+        self.LblNameAlbum.text = nameString
+        self.LblNameAlbum.numberOfLines = 6
+        self.LblNameAlbum.lineBreakMode = .byWordWrapping
+        
+        let imgURL = URL(string:imageString)
+        
+        let data = NSData(contentsOf: (imgURL)!)
+        self.imagenDetails.image = UIImage(data: data as! Data)
+    }
     
 }
