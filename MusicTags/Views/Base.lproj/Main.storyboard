@@ -218,7 +218,7 @@
                                     <constraint firstAttribute="width" constant="100" id="cxq-A8-gwu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtG-js-cxT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LblNameAlbum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtG-js-cxT">
                                 <rect key="frame" x="27" y="200" width="332" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="332" id="hfa-tP-Kaa"/>
@@ -265,6 +265,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B3j-cp-way"/>
                     </view>
+                    <connections>
+                        <outlet property="ButtonVerOnline" destination="oFK-29-RuQ" id="xJd-9x-kWo"/>
+                        <outlet property="LblNameAlbum" destination="MtG-js-cxT" id="kdm-ip-ReI"/>
+                        <outlet property="imagenDetails" destination="AxC-TH-IXY" id="Zh1-KX-Vmu"/>
+                        <outlet property="tableView" destination="moK-S1-Au0" id="bsE-n1-gHa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pG8-bi-fTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
